@@ -46,26 +46,33 @@ body
 }
     
     
-        #footer {
-            zoom: 1.5;
-			position: fixed;
-			left: -15;
-			bottom: 0;
-			width: 100%;
-			background-color:rgba(0, 0, 0, 0);
-			color: white;
-			text-align: center;
-			padding: 0px;
-		}
-        
-ul#menu li {
-  display:inline;
-  list-style-type: disc;
-  margin-top: 1em;
-  margin-bottom: 1 em;
-  margin-left: 0;
-  margin-right: 0;
-  padding-left: 15px;
-  padding-right: 15px;
+ #footer {
+    position: fixed;
+    left: -15;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+ul#menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Display menu items horizontally */
+    align-items: center; /* Center menu items vertically within the footer */
+}
+
+ul#menu li {
+    margin: 0 10px; /* Add spacing between menu items */
+}
+
+.image-container {
+    text-align: center;
+    padding: 20px; /* Add padding for spacing */
+}
