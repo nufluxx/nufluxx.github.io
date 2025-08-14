@@ -1,38 +1,87 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuflux</title>
-    <link rel="stylesheet" type="text/css" href="index.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nuflux — Links</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
-    <audio id="myAudio" autoplay loop>
-    <source src="../assets/music.mp3" type="audio/mpeg">
-</audio>
-
-<script>
-    var audio = document.getElementById("myAudio");
-    audio.volume = 0.05; // Set the volume to 50% (0.0 to 1.0)
-</script>
-
-
 <body>
-    <center>
-        <div class="image-container">
-            <img class="shadowfilter bounce" src="https://nuflux.org/assets/logo2.gif" alt="nuflux" width="100%" style="max-width: 500px; height: auto;">
-        </div>
-    </center>
-    
+  <div class="stage">
+    <div class="topbar">Nuflux</div>
 
-    <center>
-        <div id="footer">
-            <ul id="menu">
-                <li><a href="https://www.soundcloud.com/nuflux"><img class="shadowfilter" src="../assets/soundcloud.png"style= width=50 height=50></a></li>
-                <li><a href="https://nuflux.bandcamp.com"><img class="shadowfilter" src="../assets/bandcamp.png"style= width=50 height=50></a></li>
-                <li><a href="https://open.spotify.com/artist/0jqL6aSYl4KyQyVAhDMkEc?si=c3bbdd9579da4964"><img class="shadowfilter" src="../assets/spotify.svg"style= width=50 height=50></a></li>
-                <li><a href="https://music.youtube.com/channel/UCauFRoL95jWygAKB8VD29HA"><img class="shadowfilter" src="../assets/youtube.png"style= width=50 height=50></a></li>
-                <li><a href="https://www.instagram.com/djnuflux"><img class="shadowfilter" src="../assets/instagram.png"style= width=50 height=50></a></li>           
-            </ul>
+    <header>
+      <div class="brand">
+        <img src="assets/logo.png" alt="Nuflux logo" />
+        <div>
+          <h1>Nuflux — Official Links</h1>
+          <div class="tag">person on the internet</div>
         </div>
-    </center>
+      </div>
+    </header>
+
+    <div class="divider"></div>
+
+    <div class="shell">
+      <!-- LEFT: LINKS -->
+      <section class="panel">
+        <div class="hdr">Destinations</div>
+        <ul class="links">
+          <li><a class="btn" href="https://open.spotify.com/artist/0jqL6aSYl4KyQyVAhDMkEc?si=c3bbdd9579da4964" target="_blank" rel="noopener"><span>Spotify</span><code class="kbd">SP</code></a></li>
+          <li><a class="btn" href="https://music.apple.com/us/artist/nuflux/1657360921" target="_blank" rel="noopener"><span>Apple Music</span><code class="kbd">AM</code></a></li>
+          <li><a class="btn" href="https://www.soundcloud.com/nuflux" target="_blank" rel="noopener"><span>SoundCloud</span><code class="kbd">SC</code></a></li>
+          <li><a class="btn" href="https://nuflux.bandcamp.com/" target="_blank" rel="noopener"><span>Bandcamp</span><code class="kbd">BC</code></a></li>
+          <li><a class="btn" href="https://music.youtube.com/channel/UCauFRoL95jWygAKB8VD29HA" target="_blank" rel="noopener"><span>YouTube Music</span><code class="kbd">YM</code></a></li>
+          <li><a class="btn" href="https://www.youtube.com/@Nuflux_" target="_blank" rel="noopener"><span>YouTube</span><code class="kbd">YT</code></a></li>
+          <li><a class="btn" href="https://www.instagram.com/djnuflux" target="_blank" rel="noopener"><span>Instagram</span><code class="kbd">IG</code></a></li>
+        </ul>
+        <div class="status">
+          <div class="chip">Links: 7</div>
+        </div>
+      </section>
+
+      <!-- RIGHT: SIDEBAR -->
+      <aside class="modules">
+        <div class="module">
+          <div class="hdr">Logo</div>
+          <div class="body spinbox">
+            <img src="assets/logo-spin.gif" alt="Nuflux spinning logo" />
+          </div>
+          <div class="note">Nuflux / logo-spin.gif 480x480px</div>
+        </div>
+
+        <div class="module">
+          <div class="hdr">System</div>
+          <div class="body">
+            <div class="chip" id="ua">UA:</div>
+            <div class="chip" id="plat">Platform:</div>
+            <div class="chip" id="lang">Lang:</div>
+          </div>
+        </div>
+
+        <!-- PLAYER -->
+        <section class="player">
+          <div class="hdr">Player</div>
+          <div class="scrolling-title"><span id="trackTitle">Loading…</span></div>
+          <div class="body">
+            <audio id="audio" preload="metadata"></audio>
+            <div class="controls">
+              <button class="btnctl" id="prev">Prev</button>
+              <button class="btnctl" id="play">Play</button>
+              <button class="btnctl" id="pause">Pause</button>
+              <button class="btnctl" id="next">Next</button>
+              <input type="range" id="volume" class="volume" min="0" max="1" step="0.01" value="1" aria-label="Volume">
+              <div class="time"><span id="cur">0:00</span>/<span id="dur">0:00</span></div>
+            </div>
+            <div class="bar" id="bar"><div class="fill" id="fill"></div></div>
+          </div>
+        </section>
+      </aside>
+    </div>
+
+    <div class="bottombar"><span>© Nuflux</span></div>
+  </div>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
