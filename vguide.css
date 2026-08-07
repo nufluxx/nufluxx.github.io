@@ -1,0 +1,7 @@
+
+a:hover  { color: #ffa54c; text-decoration: underline }
+a   { color: #d3d3d3; text-decoration: underline }
+.class.01.NEWSHED { font-style: normal; font-size: 12pt; font-family: Arial, Helvetica, Geneva, Swiss, SunSans-Regular }
+.class.02.NEWSDATE { font-family: Arial, Helvetica, Geneva, Swiss, SunSans-Regular }
+.class.03.NEWSBODY   { font-weight: normal; font-size: 9pt; font-family: Arial, Helvetica, Geneva, Swiss, Helvetica, Geneva, Swiss, SunSans-Regular; padding-top: 2pt; border-top: medium none gray }
+
